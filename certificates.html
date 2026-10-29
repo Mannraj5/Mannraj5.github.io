@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certifications | Manraj Singh Makin</title>
+<meta name="description" content="All 26 certifications of Manraj Singh Makin, each with a link to verify it on the issuer's site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600;700&display=swap">
+<style>
+/* Layout: sticky top bar, dark hero band with a grid texture and summary panel, proof strip of real results, focus areas, case files, credentials, contact. */
+:root{
+  --bg:#f2f4f7;
+  --surface:#ffffff;
+  --ink:#0e1a2b;
+  --muted:#51607a;
+  --line:#d3d9e3;
+  --accent:#1f4fd8;
+  --accent-soft:#e3eafc;
+  --ok:#0b6b4f;
+  --ok-soft:#dff3ec;
+  --band:#0a1730;
+  --band-ink:#eef2fa;
+  --band-muted:#9db0d1;
+  --band-line:rgba(157,176,209,.22);
+  --band-accent:#8fb0ff;
+  --display:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b121e;--surface:#121c2c;--ink:#e8edf5;--muted:#9aa8c0;--line:#25324a;
+    --accent:#7da2ff;--accent-soft:#1a2a52;--ok:#5fd3a8;--ok-soft:#10312a;--band:#081226;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b121e;--surface:#121c2c;--ink:#e8edf5;--muted:#9aa8c0;--line:#25324a;
+  --accent:#7da2ff;--accent-soft:#1a2a52;--ok:#5fd3a8;--ok-soft:#10312a;--band:#081226;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--band)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--band);border-bottom:1px solid var(--band-line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.bar .id{font-family:var(--display);font-weight:700;font-size:clamp(24px,4.5vw,34px);line-height:1.1;letter-spacing:-.01em;color:#ffffff}
+.bar nav{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center}
+.bar nav a{font-family:var(--mono);font-size:13px;color:var(--band-muted);text-decoration:none;padding:5px 12px;border-radius:3px}
+.bar nav a:hover{color:var(--band-ink)}
+.bar nav a.active{color:var(--band);background:var(--band-ink)}
+
+/* hero band */
+.band{background:var(--band);color:var(--band-ink)}
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:44px;padding-top:64px;padding-bottom:64px;align-items:center}
+.hero .label{color:var(--band-accent)}
+.hero h1.headline{font-family:var(--display);font-weight:600;font-size:clamp(34px,6vw,58px);line-height:1.07;margin:14px 0 18px;text-wrap:balance;letter-spacing:-.012em}
+.hero p.lead{font-size:18px;color:var(--band-muted);max-width:54ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--body);font-size:15px;font-weight:500;padding:11px 20px;border-radius:4px;border:1px solid var(--band-ink);color:var(--band);background:var(--band-ink);text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--band-ink);border-color:var(--band-line)}
+.btn:hover{border-color:var(--band-accent)}
+.panel{background:rgba(10,23,48,.72);border:1px solid var(--band-line);border-radius:4px}
+.panel .head{padding:10px 16px;border-bottom:1px solid var(--band-line);display:flex;justify-content:space-between;gap:12px}
+.panel .head .label{color:var(--band-muted)}
+.panel dl{margin:0;padding:6px 16px 10px}
+.panel .row{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px dashed var(--band-line)}
+.panel .row:last-child{border-bottom:0}
+.panel dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--band-accent);padding-top:3px}
+.panel dd{margin:0;font-size:15px;color:var(--band-ink)}
+
+/* proof strip */
+.proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:4px;margin-top:-1px;transform:translateY(-32px)}
+.proof div{padding:20px;border-right:1px solid var(--line)}
+.proof div:last-child{border-right:0}
+.proof strong{display:block;font-family:var(--mono);font-weight:500;font-size:30px;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
+.proof span{display:block;font-size:14px;color:var(--muted);margin-top:6px}
+.proof em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+
+/* sections */
+section{padding:44px 0;border-top:1px solid var(--line)}
+section.first{border-top:0;padding-top:12px}
+section>.wrap>h2{font-family:var(--display);font-weight:600;font-size:30px;margin:0 0 6px;text-wrap:balance}
+section>.wrap>p.sub{color:var(--muted);margin:0 0 28px;max-width:64ch}
+
+/* focus */
+.focus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.focus article{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px}
+.focus h3{font-family:var(--display);font-size:20px;margin:6px 0 8px}
+.focus p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.focus .refs{font-family:var(--mono);font-size:12px;color:var(--accent)}
+
+/* case files */
+.case{background:var(--surface);border:1px solid var(--line);border-radius:4px;margin-bottom:20px;overflow:hidden;transition:border-color .15s}
+.case:hover{border-color:var(--accent)}
+.case .top{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:center;padding:10px 20px;border-bottom:1px solid var(--line);background:var(--bg)}
+.case .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;padding:24px 20px}
+.case h3{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.25;margin:0 0 10px;text-wrap:balance}
+.case p{margin:0 0 14px}
+.case ul{margin:0 0 16px;padding-left:20px}
+.case li{margin-bottom:8px}
+.src{font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}
+.result{display:flex;gap:12px;align-items:flex-start;background:var(--ok-soft);border-radius:4px;padding:12px 14px;font-size:14.5px}
+.result b{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding-top:2px;color:var(--ok)}
+.result span{color:var(--ink)}
+.tag{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--line);border-radius:3px;padding:2px 8px;background:var(--bg);color:var(--muted)}
+.case .chips{margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.grid .case{margin:0;display:flex;flex-direction:column}
+.grid .case .inner{padding:20px;display:flex;flex-direction:column;flex:1}
+.grid .case h3{font-size:20px}
+.grid .case .result{margin-top:auto}
+
+/* credentials */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:22px}
+.two h3{font-family:var(--display);font-size:20px;margin:0 0 12px}
+.two ul{margin:0;padding-left:20px}
+.two li{margin-bottom:6px}
+.kv{margin:0 0 14px}
+.kv:last-child{margin:0}
+.kv .label{display:block;margin-bottom:6px}
+
+/* contact band */
+.contactband{background:var(--band);color:var(--band-ink);padding:48px 0}
+.contactband h2{font-family:var(--display);font-weight:600;font-size:30px;margin:0 0 8px}
+.contactband p{color:var(--band-muted);margin:0 0 24px;max-width:64ch}
+.contact{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.mail{font-family:var(--mono);font-size:16px;user-select:all}
+.contactband a{color:var(--band-accent)}
+.rows{border-top:1px solid var(--band-line);max-width:760px}
+.crow{display:grid;grid-template-columns:90px minmax(0,1fr) auto;gap:8px 16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--band-line)}
+.crow .label{color:var(--band-accent)}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:640px){.crow{grid-template-columns:minmax(0,1fr)}}
+footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family:var(--mono);padding:16px 0 28px;border-top:1px solid var(--band-line)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);padding-top:40px;padding-bottom:48px}
+  .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proof div:nth-child(2){border-right:0}
+  .proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .focus,.two,.grid{grid-template-columns:minmax(0,1fr)}
+  .case .body{grid-template-columns:minmax(0,1fr);gap:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.case{transition:none}}
+
+.cert-hero{padding-top:48px;padding-bottom:40px}
+.cert-hero h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,6vw,52px);line-height:1.08;margin:12px 0 12px;text-wrap:balance;color:#fff}
+.cert-hero p{color:var(--band-muted);max-width:60ch;margin:0}
+.group{margin:0 0 36px}
+.group h2{font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 4px}
+.group .gsub{color:var(--muted);margin:0 0 14px;font-size:15px}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:4px}
+.item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;align-items:center;padding:13px 18px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .nm{font-size:16px}
+.item .via{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:14px}
+.item a.v{font-family:var(--mono);font-size:13px;font-weight:500;text-decoration:none;border:1px solid var(--line);border-radius:3px;padding:3px 12px;color:var(--accent);background:var(--bg);white-space:nowrap}
+.item a.v:hover{border-color:var(--accent)}
+@media (max-width:640px){.item{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="id" href="index.html" style="text-decoration:none">Manraj Singh Makin</a>
+    <nav aria-label="Pages">
+      <a href="index.html">Back to portfolio</a>
+      <a class="active" href="certificates.html">Certifications</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="band">
+    <div class="wrap cert-hero">
+      <span class="label" style="color:var(--band-accent)">Credentials</span>
+      <h1>26 certifications, each one verifiable.</h1>
+      <p>Every entry links to the issuer's own page, so you can check it is real. Google certificates are issued through Coursera and Credly, SC-900 by Microsoft, and the AI tool certificates by Tixu.ai.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding-top:36px">
+    <section class="group" style="border:0;padding:0 0 36px">
+      <h2>Google</h2>
+      <p class="gsub">15 certificates: the Google Cybersecurity Professional Certificate (v.2), its 8 courses, and 6 more Google career certificate courses.</p>
+      <div class="list">
+        <div class="item"><span class="nm">Google Cybersecurity Professional Certificate (v.2)</span><span><span class="via">Credly</span><a class="v" href="https://www.credly.com/badges/ab1d07d5-37d3-49e6-8ea1-3de77e7ed19f/linked_in_profile" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Foundations of Cybersecurity</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/3T5A91PMHZNO" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Play It Safe: Manage Security Risks</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/C23N0JGWYI2Y" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Connect and Protect: Networks and Network Security</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/1PS6A2YJDXXK" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Tools of the Trade: Linux and SQL</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/8VIWRTYS8GVK" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Assets, Threats, and Vulnerabilities</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/KIG4IO4R9NW8" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Sound the Alarm: Detection and Response</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/J9GXDX52CCNU" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Automate Cybersecurity Tasks with Python</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/FJY4TOK1XKJR" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Put It to Work: Prepare for Cybersecurity Jobs</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/RWNK5S3Y840E" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Technical Support Fundamentals</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/I1KZYN4AXS5T" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">The Bits and Bytes of Computer Networking</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/8AUZRE8XJ8R8" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Operating Systems and You: Becoming a Power User</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/CE2ZRPFK6JKN" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">System Administration and IT Infrastructure Services</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/CZIOW020H2D0" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">IT Security: Defense Against the Digital Dark Arts</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/NZY1C4UU7L7R" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Accelerate Your Job Search with AI</span><span><span class="via">Coursera</span><a class="v" href="https://www.coursera.org/account/accomplishments/records/R13XVVNL2OFC" target="_blank" rel="noopener">Verify</a></span></div>
+      </div>
+    </section>
+    <section class="group" style="border:0;padding:0 0 36px">
+      <h2>Microsoft</h2>
+      <p class="gsub">1 certification.</p>
+      <div class="list">
+        <div class="item"><span class="nm">Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</span><span><span class="via">Microsoft Learn</span><a class="v" href="https://learn.microsoft.com/api/credentials/share/en-us/Mannraj-2420/CE190F4F61E31AF1?sharingId" target="_blank" rel="noopener">Verify</a></span></div>
+      </div>
+    </section>
+    <section class="group" style="border:0;padding:0 0 12px">
+      <h2>Applied AI tools (Tixu.ai)</h2>
+      <p class="gsub">10 short course certificates on AI tools.</p>
+      <div class="list">
+        <div class="item"><span class="nm">Claude</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/7074cea5-1a31aa-a499-50-8d336517e7ab" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">ChatGPT</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/c4cf97f9-1a31aa-b16f-4f-2f5db10e055b" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Nano Banana</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/19509149-1a31aa-af08-51-3afe33eac06c" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Kling</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/fb1c7ef7-1a31aa-1976-54-46e7dd315c5a" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Lovable</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/00b3fa2a-1a31aa-6bbb-53-cb66890a83a9" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">AI for Project Managers</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/34defeeb-1a31aa-7255-58-79396645fd53" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">AI for HR</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/5ec37abb-1a31aa-dcc3-59-44c8b4bcda09" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">AI for Sales Managers</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/998d6e76-1a31aa-6527-5a-7a4dc5c1af10" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Claude Vibe Coding</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/0ad32e70-1a31aa-fd3a-56-447bcf22772f" target="_blank" rel="noopener">Verify</a></span></div>
+        <div class="item"><span class="nm">Claude Advanced Workflows</span><span><span class="via">Tixu.ai</span><a class="v" href="https://tixu.ai/certificate/04444182-1a31aa-ddbd-55-134b037ec334" target="_blank" rel="noopener">Verify</a></span></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap">Manraj Singh Makin · <a href="index.html" style="color:var(--band-accent)">Back to portfolio</a></div></footer>
+</body>
+</html>
