@@ -78,8 +78,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 
 /* proof strip */
 .proof{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border:1px solid var(--line);border-radius:4px;margin-top:-1px;transform:translateY(-32px)}
-.proof div{padding:20px;border-right:1px solid var(--line)}
-.proof div:last-child{border-right:0}
+.proof>*{padding:20px;border-right:1px solid var(--line);display:block;color:inherit;text-decoration:none;transition:background .15s}
+.proof a:hover{background:var(--accent-soft)}
+.proof a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.proof>*:last-child{border-right:0}
 .proof strong{display:block;font-family:var(--mono);font-weight:500;font-size:30px;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
 .proof span{display:block;font-size:14px;color:var(--muted);margin-top:6px}
 .proof em{display:block;font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:8px}
@@ -147,8 +149,8 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
 @media (max-width:860px){
   .hero{grid-template-columns:minmax(0,1fr);padding-top:40px;padding-bottom:48px}
   .proof{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .proof div:nth-child(2){border-right:0}
-  .proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .proof>*:nth-child(2){border-right:0}
+  .proof>*:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .focus,.two,.grid{grid-template-columns:minmax(0,1fr)}
   .case .body{grid-template-columns:minmax(0,1fr);gap:16px}
 }
@@ -198,10 +200,10 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
 
   <div class="wrap">
     <div class="proof" aria-label="Results from the projects">
-      <div><strong>9 / 9</strong><span>expected alerts fired, none on benign activity</span><em>Project 06</em></div>
-      <div><strong>6</strong><span>custom Snort 3 signatures, scored across every attack phase</span><em>Project 02</em></div>
-      <div><strong>2.4 s</strong><span>to analyse a 132,727-packet capture</span><em>Project 07</em></div>
-      <div><strong>7</strong><span>projects, each with code on GitHub</span><em>Projects 01 to 07</em></div>
+      <a href="#project-6"><strong>9 / 9</strong><span>expected alerts fired, none on benign activity</span><em>Project 06</em></a>
+      <a href="#project-2"><strong>6</strong><span>custom Snort 3 signatures, scored across every attack phase</span><em>Project 02</em></a>
+      <a href="#project-7"><strong>2.4 s</strong><span>to analyse a 132,727-packet capture</span><em>Project 07</em></a>
+      <a href="https://github.com/Mannraj5" target="_blank" rel="noopener"><strong>7</strong><span>projects, each with code on GitHub</span><em>View all on GitHub</em></a>
     </div>
   </div>
 
@@ -237,7 +239,7 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
       <h2>Featured projects</h2>
       <p class="sub">The three projects that best show detection, analysis and testing work. Each links to its code and written reports on GitHub.</p>
 
-      <article class="case">
+      <article class="case" id="project-2">
         <div class="top"><span class="label">Project 02</span><span class="tag">Academic project, extended for portfolio</span></div>
         <div class="body">
           <div>
@@ -258,7 +260,7 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
         </div>
       </article>
 
-      <article class="case">
+      <article class="case" id="project-6">
         <div class="top"><span class="label">Project 06</span><span class="tag">Academic project, extended for portfolio</span></div>
         <div class="body">
           <div>
@@ -279,7 +281,7 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
         </div>
       </article>
 
-      <article class="case">
+      <article class="case" id="project-7">
         <div class="top"><span class="label">Project 07</span><span class="tag">Personal project</span></div>
         <div class="body">
           <div>
