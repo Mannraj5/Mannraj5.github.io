@@ -178,7 +178,7 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
       <div>
         <span class="label">Professional portfolio</span>
         <h1 class="headline">Cyber security student who secures identities and cloud access, and tests every control against evidence.</h1>
-        <p class="lead">Third-year Bachelor of Information Technology (Cyber Security) student at Deakin University. Projects cover identity and access management across Microsoft Entra ID and AWS, purple-team detection engineering, network forensics, protocol and packet analysis, and cloud log analysis.</p>
+        <p class="lead">Third-year Bachelor of Information Technology (Cyber Security) student at Deakin University. Projects cover cloud detection engineering and identity and access management across Microsoft Entra ID and AWS, purple-team detection engineering, network forensics, protocol and packet analysis, and cloud log analysis.</p>
         <div class="cta">
           <a class="btn" href="#featured">View projects</a>
           <a class="btn alt" href="certificates.html">Certifications</a>
@@ -200,10 +200,10 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
 
   <div class="wrap">
     <div class="proof" aria-label="Results from the projects">
+      <a href="#project-9"><strong>10 / 10</strong><span>cloud detection rules alerted on real attacks in my own lab</span><em>Project 09</em></a>
       <a href="#project-8"><strong>0</strong><span>IAM users and no long-lived human credentials in AWS</span><em>Project 08</em></a>
       <a href="#project-2"><strong>6</strong><span>custom Snort 3 signatures, scored across every attack phase</span><em>Project 02</em></a>
-      <a href="#project-6"><strong>9 / 9</strong><span>expected alerts fired, none on benign activity</span><em>Project 06</em></a>
-      <a href="https://github.com/Mannraj5" target="_blank" rel="noopener"><strong>8</strong><span>projects, each with code on GitHub</span><em>View all on GitHub</em></a>
+      <a href="https://github.com/Mannraj5" target="_blank" rel="noopener"><strong>9</strong><span>projects, each with code on GitHub</span><em>View all on GitHub</em></a>
     </div>
   </div>
 
@@ -215,8 +215,8 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
         <article>
           <span class="label">Detection engineering</span>
           <h3>Write detections, then test them</h3>
-          <p>Custom Snort 3 signatures and SQL detections, scored against planted attacks and benign look-alikes.</p>
-          <span class="refs">Projects 02, 06</span>
+          <p>Sigma rules run in Elastic Security and tested with real cloud attacks, plus custom Snort 3 signatures and SQL detections scored against planted attacks and benign look-alikes.</p>
+          <span class="refs">Projects 09, 02, 06</span>
         </article>
         <article>
           <span class="label">Network and packet analysis</span>
@@ -227,8 +227,8 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
         <article>
           <span class="label">Cloud and identity security</span>
           <h3>Lock down access, then check the logs</h3>
-          <p>Entra ID federated with AWS for least-privilege access, plus SQL detections over identity, IAM and database-configuration logs mapped to MITRE ATT&amp;CK.</p>
-          <span class="refs">Projects 08, 06</span>
+          <p>Entra ID federated with AWS for least-privilege access, then CloudTrail and Entra logs watched by detection rules mapped to MITRE ATT&amp;CK.</p>
+          <span class="refs">Projects 08, 09, 06</span>
         </article>
       </div>
     </div>
@@ -237,7 +237,29 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
   <section id="featured">
     <div class="wrap">
       <h2>Featured projects</h2>
-      <p class="sub">The four projects that best show identity, detection, analysis and testing work. Each links to its code and written reports on GitHub.</p>
+      <p class="sub">The four projects that best show detection, identity, analysis and testing work. Each links to its code and written reports on GitHub.</p>
+
+      <article class="case" id="project-9">
+        <div class="top"><span class="label">Project 09</span><span class="tag">Personal project</span></div>
+        <div class="body">
+          <div>
+            <h3>Cloud Detection Engineering Lab: AWS and Microsoft Entra ID</h3>
+            <p>Ten detection rules for AWS CloudTrail and Microsoft Entra ID, run in Elastic Security and tested with real, controlled attacks in my own AWS organisation and Entra tenant.</p>
+            <div class="chips"><span class="chip">Sigma</span><span class="chip">Elastic Security (ES|QL)</span><span class="chip">AWS CloudTrail</span><span class="chip">Entra ID</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">GitHub Actions</span></div>
+            <a class="src" href="https://github.com/Mannraj5/Project-9-Cloud-Detection-Engineering" target="_blank" rel="noopener">github.com/Mannraj5/Project-9-Cloud-Detection-Engineering</a>
+            <p style="margin:10px 0 0"><a class="src" href="https://youtu.be/Irp7sPbaK2A" target="_blank" rel="noopener">6-minute video walkthrough</a></p>
+          </div>
+          <div>
+            <ul>
+              <li>Wrote 10 Sigma rules (CloudTrail tampering, root sign-in, access keys, tier-0 roles, mass account disable, password guessing), converted to ES|QL and run in Elastic Security on a local Elasticsearch.</li>
+              <li>Tested every rule with a real attack in the lab I built in Project 08, including ones the guardrails blocked: prevented and still detected.</li>
+              <li>Real logs exposed 3 false positives and a root sign-in blind spot that the test data missed. Tuned each rule without an ES|QL null-handling trap that would have hidden real attacks.</li>
+              <li>The break-glass rule caught an emergency admin account left signed in on a phone, closed the same day and logged as an incident.</li>
+            </ul>
+            <div class="result"><b>Result</b><span>All 10 rules alerted on real attacks, 50 test cases run in CI against a real Elasticsearch, with redacted evidence for every test. Total cost $0.</span></div>
+          </div>
+        </div>
+      </article>
 
       <article class="case" id="project-8">
         <div class="top"><span class="label">Project 08</span><span class="tag">Personal project</span></div>
@@ -304,33 +326,30 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
         </div>
       </article>
 
-      <article class="case" id="project-7">
-        <div class="top"><span class="label">Project 07</span><span class="tag">Personal project</span></div>
-        <div class="body">
-          <div>
-            <h3>PCAP Threat Analyzer (pcapscope)</h3>
-            <p>A packet-capture analyser using only the standard library. Reads pcap and pcapng files and decodes Ethernet, IPv4/IPv6, ARP, TCP, UDP, ICMP, DNS and SMB.</p>
-            <div class="chips"><span class="chip">pcap / pcapng</span><span class="chip">DNS</span><span class="chip">SMB</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span></div>
-            <a class="src" href="https://github.com/Mannraj5/Project-7-PCAP-Threat-Analyzer" target="_blank" rel="noopener">github.com/Mannraj5/Project-7-PCAP-Threat-Analyzer</a>
-          </div>
-          <div>
-            <ul>
-              <li>Eight detectors run in a single pass: port scan, host sweep, C2, beaconing, SMB exploit, DNS tunnelling, ARP spoofing and cleartext credentials. A capture-health check is included.</li>
-              <li>Found and fixed a session-tracking bug (sessions keyed on three fields instead of the full 4-tuple) and added a regression test.</li>
-              <li>59 synthetic-capture tests, with GitHub Actions CI on Ubuntu and Windows.</li>
-            </ul>
-            <div class="result"><b>Result</b><span>Validated against six captures from the Purple Team Lab. Packet counts matched capinfos, expected attacks were detected, the baseline was clean, and a 132,727-packet scan was analysed in 2.4 s.</span></div>
-          </div>
-        </div>
-      </article>
     </div>
   </section>
 
   <section id="more">
     <div class="wrap">
       <h2>More projects</h2>
-      <p class="sub">Earlier work across forensics, protocols, robotics simulation and web development.</p>
+      <p class="sub">Earlier work across packet analysis, forensics, protocols, robotics simulation and web development.</p>
       <div class="grid">
+        <article class="case" id="project-7">
+          <div class="top"><span class="label">Project 07</span><span class="tag">Personal project</span></div>
+          <div class="inner">
+            <h3>PCAP Threat Analyzer (pcapscope)</h3>
+            <p>A packet-capture analyser using only the standard library. Reads pcap and pcapng files and decodes Ethernet, IPv4/IPv6, ARP, TCP, UDP, ICMP, DNS and SMB.</p>
+            <div class="chips"><span class="chip">pcap / pcapng</span><span class="chip">DNS</span><span class="chip">SMB</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span></div>
+            <ul>
+              <li>Eight detectors in a single pass: port scan, host sweep, C2, beaconing, SMB exploit, DNS tunnelling, ARP spoofing and cleartext credentials.</li>
+              <li>Found and fixed a session-tracking bug (three fields instead of the full 4-tuple) and added a regression test.</li>
+              <li>59 synthetic-capture tests, with GitHub Actions CI on Ubuntu and Windows.</li>
+            </ul>
+            <div class="result"><b>Result</b><span>Validated against six Purple Team Lab captures; a 132,727-packet scan analysed in 2.4 s.</span></div>
+            <p style="margin:12px 0 0"><a class="src" href="https://github.com/Mannraj5/Project-7-PCAP-Threat-Analyzer" target="_blank" rel="noopener">github.com/Mannraj5/Project-7-PCAP-Threat-Analyzer</a></p>
+          </div>
+        </article>
+
         <article class="case">
           <div class="top"><span class="label">Project 01</span><span class="tag">Academic, extended</span></div>
           <div class="inner">
@@ -416,6 +435,7 @@ footer{background:var(--band);color:var(--band-muted);font-size:13px;font-family
           <div class="kv"><span class="label">Operating systems</span><div class="chips"><span class="chip">Kali Linux</span><span class="chip">Ubuntu Linux</span><span class="chip">Windows CMD</span><span class="chip">PowerShell</span></div></div>
           <div class="kv"><span class="label">Security and networking</span><div class="chips"><span class="chip">Wireshark</span><span class="chip">Snort 3</span><span class="chip">Cisco Packet Tracer</span></div></div>
           <div class="kv"><span class="label">Cloud and identity</span><div class="chips"><span class="chip">Microsoft Entra ID</span><span class="chip">AWS IAM Identity Center</span><span class="chip">AWS Organizations</span><span class="chip">CloudTrail</span><span class="chip">Graph PowerShell</span><span class="chip">AWS CLI</span></div></div>
+          <div class="kv"><span class="label">Detection and SIEM</span><div class="chips"><span class="chip">Elastic Security</span><span class="chip">Kibana</span><span class="chip">ES|QL</span><span class="chip">Sigma</span><span class="chip">MITRE ATT&amp;CK</span><span class="chip">Docker</span></div></div>
           <div class="kv"><span class="label">Version control and testing</span><div class="chips"><span class="chip">GitHub</span><span class="chip">GitHub Actions</span><span class="chip">pytest</span></div></div>
           <div class="kv"><span class="label">Applied AI tools</span><div class="chips"><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">GitHub Copilot</span><span class="chip">Google Gemini</span><span class="chip">Meta AI</span></div></div>
         </div>
